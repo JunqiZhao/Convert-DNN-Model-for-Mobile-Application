@@ -72,10 +72,7 @@ def get_IO_Nodes_Names(GRAPH_PB_PATH):
        sess.graph.as_default()
        tf.import_graph_def(graph_def, name='')
        graph_nodes=[n for n in graph_def.node]
-       names = []
-       for t in graph_nodes:
-          names.append(t.name)
-       print(names[0])
-       print(names[-1])
+       print(graph_nodes[0])
+       print(graph_nodes[-1])
 
 get_IO_Nodes_Names(GRAPH_PB_PATH)
